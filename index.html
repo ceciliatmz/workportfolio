@@ -34,6 +34,7 @@
   --shadow:    rgba(0,0,0,0.4);
   --cursor-blend: screen;
   --body-bg:   radial-gradient(ellipse at 50% 35%, #1a3a8a 0%, #0d1f50 45%, #060f28 100%);
+  --nav-scrolled-color: rgba(9,21,53,0.85);
 }
 
 [data-theme="light"]{
@@ -56,6 +57,7 @@
   --shadow:    rgba(0,30,100,0.15);
   --cursor-blend: multiply;
   --body-bg:   radial-gradient(ellipse at 50% 35%, #c8d8ff 0%, #dce8ff 45%, #eef4ff 100%);
+  --nav-scrolled-color: rgba(240,245,255,0.90);
 }
 
 html{scroll-behavior:auto}
@@ -111,7 +113,7 @@ nav{
   transition:background .4s,border-color .4s;
 }
 nav.scrolled{
-  background:rgba(var(--nav-scrolled-bg, 9,21,53),0.85);
+  background:var(--nav-scrolled-color,rgba(9,21,53,0.85));
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
 }
@@ -833,7 +835,7 @@ footer{
       <div class="s-label">About</div>
       <h2 class="s-title reveal">More than<br/><em>a designer</em></h2>
       <div class="about-text reveal">
-        <p>I'm <strong>Cecilia Dai</strong> — a Senior UI/UX Engineer at <strong>ST Engineering</strong> with 5+ years building digital products at the intersection of strategy, engineering, and art.</p>
+        <p>6+ years of UI/UX experience building digital products at the intersection of strategy, engineering, and art.</p>
         <br/>
         <p>I combine design thinking with technology to create intuitive, future-ready experiences. Leveraging AI and modern tools, I streamline workflows, explore new possibilities, and turn ideas into impactful solutions.</p>
       </div>
