@@ -642,6 +642,67 @@ section{padding:120px 48px;border-top:1px solid rgba(0,200,255,0.12);}
 .clink.filled{background:var(--ink);color:var(--bg)}
 .clink.filled:hover{background:var(--blue);border-color:var(--blue);color:#fff}
 
+/* ── PROJECT MODAL ─────────────────────────────── */
+.proj-modal-overlay{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,0);
+  backdrop-filter:blur(0px);
+  pointer-events:none;
+  transition:background .35s,backdrop-filter .35s;
+}
+.proj-modal-overlay.open{
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(8px);
+  pointer-events:all;
+}
+.proj-modal{
+  position:fixed;bottom:0;left:0;right:0;
+  z-index:501;
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  border-radius:28px 28px 0 0;
+  max-height:88vh;overflow-y:auto;
+  transform:translateY(100%);
+  transition:transform .45s cubic-bezier(.16,1,.3,1);
+  padding:0 0 60px;
+}
+.proj-modal.open{transform:translateY(0)}
+.proj-modal-drag{
+  width:44px;height:5px;border-radius:3px;
+  background:var(--border);margin:16px auto 0;
+}
+.proj-modal-header{
+  padding:28px 48px 0;
+  display:flex;justify-content:space-between;align-items:flex-start;
+}
+.proj-modal-close{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--border);background:var(--card-bg);
+  font-size:18px;color:var(--muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:background .2s,color .2s;
+}
+.proj-modal-close:hover{background:var(--ink);color:var(--bg)}
+.proj-modal-tag{font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--cyan);background:var(--subtle);padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:12px}
+.proj-modal-title{font-size:clamp(24px,4vw,42px);font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1.1}
+.proj-modal-body{padding:36px 48px 0;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.proj-modal-mockup{grid-column:span 2;border-radius:16px;overflow:hidden;background:var(--bg);border:1px solid var(--border)}
+.proj-modal-mockup svg{width:100%;display:block}
+.proj-modal-section{margin-bottom:32px}
+.proj-modal-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+.proj-modal-text{font-size:15px;line-height:1.75;color:var(--ink2)}
+.proj-modal-metrics{grid-column:span 2;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:0}
+.proj-metric{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:20px 24px}
+.proj-metric-val{font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--cyan);letter-spacing:-.04em}
+.proj-metric-label{font-size:13px;color:var(--muted);margin-top:4px}
+@media(max-width:700px){
+  .proj-modal-body{grid-template-columns:1fr;gap:28px}
+  .proj-modal-mockup,.proj-modal-metrics{grid-column:span 1}
+  .proj-modal-metrics{grid-template-columns:1fr 1fr}
+  .proj-modal-header{padding:20px 24px 0}
+  .proj-modal-body{padding:24px 24px 0}
+}
+
 /* ── FOOTER ────────────────────────────────────── */
 footer{
   padding:32px 48px;border-top:1px solid var(--border);
@@ -867,7 +928,7 @@ footer{
     <div class="projects-grid">
 
       <!-- 01 Operations Intelligence Platform — wide card -->
-      <div class="proj-card wide reveal">
+      <div class="proj-card wide reveal" data-id="01">
         <div class="proj-arrow">↗</div>
         <div class="proj-mockup">
           <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
@@ -939,7 +1000,7 @@ footer{
       </div>
 
       <!-- 02 Real-Time Analytics Dashboard -->
-      <div class="proj-card reveal">
+      <div class="proj-card reveal" data-id="02">
         <div class="proj-arrow">↗</div>
         <div class="proj-mockup">
           <svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg">
@@ -983,7 +1044,7 @@ footer{
       </div>
 
       <!-- 03 Unified Design System -->
-      <div class="proj-card reveal">
+      <div class="proj-card reveal" data-id="03">
         <div class="proj-arrow">↗</div>
         <div class="proj-mockup">
           <svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg">
@@ -1046,7 +1107,7 @@ footer{
       </div>
 
       <!-- 04 Mobile Field Operations App -->
-      <div class="proj-card reveal">
+      <div class="proj-card reveal" data-id="04">
         <div class="proj-arrow">↗</div>
         <div class="proj-mockup" style="background:var(--bg3)">
           <svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg">
@@ -1103,7 +1164,7 @@ footer{
       </div>
 
       <!-- 05 Branding System — Tech Startup -->
-      <div class="proj-card reveal">
+      <div class="proj-card reveal" data-id="05">
         <div class="proj-arrow">↗</div>
         <div class="proj-mockup">
           <svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg">
@@ -1169,6 +1230,20 @@ footer{
     </div>
   </div>
 </section>
+
+<!-- PROJECT MODAL -->
+<div class="proj-modal-overlay" id="projOverlay"></div>
+<div class="proj-modal" id="projModal" role="dialog" aria-modal="true">
+  <div class="proj-modal-drag"></div>
+  <div class="proj-modal-header">
+    <div>
+      <div class="proj-modal-tag" id="modalTag"></div>
+      <div class="proj-modal-title" id="modalTitle"></div>
+    </div>
+    <button class="proj-modal-close" id="modalClose" aria-label="Close">✕</button>
+  </div>
+  <div class="proj-modal-body" id="modalBody"></div>
+</div>
 
 <footer>
   <span class="f-copy">© 2026 Cecilia Dai</span>
@@ -2061,6 +2136,114 @@ track.innerHTML += track.innerHTML;
     renderer.render(scene, cam);
   })();
 })();
+</script>
+
+<script>
+/* ── PROJECT MODAL ─────────────────────────────── */
+const PROJECTS = {
+  '01': {
+    tag: 'Dashboard · Design System',
+    title: 'Operations Intelligence Platform',
+    year: '2022 – 2024',
+    overview: 'A complete end-to-end redesign of an enterprise operations platform used by 500+ field and desk engineers. The system was fragmented across 6 legacy tools — we unified them into a single, coherent experience built on a shared design system.',
+    role: 'Lead UI/UX Engineer. I owned the full design-to-production pipeline: user research, interaction design, component architecture, and front-end implementation in React.',
+    process: 'Started with 3 weeks of contextual inquiry with engineers on-site. Built a service blueprint to map pain points, then ran 4 rounds of usability testing across hi-fi prototypes before shipping. Designed and coded 40+ reusable components with full accessibility and dark-mode support.',
+    metrics: [{ val: '47%', label: 'Task efficiency gain' }, { val: '500+', label: 'Engineers onboarded' }, { val: '40+', label: 'Components shipped' }],
+    svgId: 'modal-svg-01'
+  },
+  '02': {
+    tag: 'Data Viz · B2B',
+    title: 'Real-Time Analytics Dashboard',
+    year: '2023',
+    overview: 'A custom data visualisation layer built on top of live operational data streams. The challenge was making dense, fast-changing data readable at a glance for non-technical operators.',
+    role: 'Senior UI/UX Engineer & Front-end lead. Designed all 12 chart types from scratch and implemented them in D3.js with real-time update animations.',
+    process: 'Ran a competitive audit of 8 analytics tools, then workshopped with operators to identify the 5 most critical data questions they needed answered in under 3 seconds. Iterated on information hierarchy through 6 rounds of A/B testing on layout density.',
+    metrics: [{ val: '12', label: 'Chart types designed' }, { val: '3s', label: 'Time-to-insight target' }, { val: '98%', label: 'Operator adoption rate' }],
+    svgId: 'modal-svg-02'
+  },
+  '03': {
+    tag: 'Design System · Tokens',
+    title: 'Unified Design System',
+    year: '2022',
+    overview: 'Built a design system from zero — token architecture, 80+ components, and a documentation site — to eliminate the design-engineering handoff friction that was costing the team weeks per sprint.',
+    role: 'Design System Lead. Sole designer and co-engineer. Responsible for token taxonomy, Figma library, React component library, and the Storybook-based documentation site.',
+    process: 'Audited the existing codebase and found 340+ unique colour values and 12 conflicting button variants. Reduced these to a single token layer. Ran weekly office hours for engineers during rollout to ensure adoption.',
+    metrics: [{ val: '80+', label: 'Components built' }, { val: '70%', label: 'Less dev-design friction' }, { val: '0→1', label: 'Token architecture' }],
+    svgId: 'modal-svg-03'
+  },
+  '04': {
+    tag: 'Mobile · Consumer',
+    title: 'Mobile Field Operations App',
+    year: '2021',
+    overview: 'A native mobile app for field engineers who work in low-connectivity environments. Designed for one-handed use, offline-first data sync, and gesture-based navigation to reduce friction on-site.',
+    role: 'Lead UX Designer. Conducted field research on-site, designed the full app flow in Figma, and collaborated closely with iOS and Android engineers during implementation.',
+    process: 'Spent 2 weeks embedded with field engineers to understand real usage context — gloves, bright sunlight, one hand free. Key insight: standard tap targets are too small. Redesigned the entire interaction model around large gesture zones and haptic feedback.',
+    metrics: [{ val: '4.8★', label: 'App store rating' }, { val: '60%', label: 'Faster task completion' }, { val: '100%', label: 'Offline capability' }],
+    svgId: 'modal-svg-04'
+  },
+  '05': {
+    tag: 'Branding · Identity',
+    title: 'Branding System — Tech Startup',
+    year: '2020',
+    overview: 'Full visual identity for a Singapore-based fintech startup — logo system, colour palette, typography, motion language, and a digital-first brand guidelines site.',
+    role: 'Brand Designer & Art Director. Solo project from brief to final delivery, including motion guidelines and all brand collateral templates.',
+    process: 'Ran 3 brand workshops with founders to extract core values and personality. Explored 4 distinct visual directions before landing on a warm, human-forward identity that stood apart from the cold, utilitarian fintech aesthetic of competitors.',
+    metrics: [{ val: '4wk', label: 'Brief to delivery' }, { val: '6', label: 'Brand touchpoints' }, { val: '100%', label: 'Founder satisfaction' }],
+    svgId: 'modal-svg-05'
+  }
+};
+
+const overlay = document.getElementById('projOverlay');
+const modal   = document.getElementById('projModal');
+const modalClose = document.getElementById('modalClose');
+
+function openModal(id) {
+  const p = PROJECTS[id];
+  if (!p) return;
+  document.getElementById('modalTag').textContent = p.tag;
+  document.getElementById('modalTitle').textContent = p.title;
+  const mockupHTML = document.querySelector('.proj-card[data-id="' + id + '"] .proj-mockup').innerHTML;
+  document.getElementById('modalBody').innerHTML = `
+    <div class="proj-modal-mockup">
+      ${mockupHTML}
+    </div>
+    <div>
+      <div class="proj-modal-section">
+        <div class="proj-modal-label">Overview</div>
+        <div class="proj-modal-text">${p.overview}</div>
+      </div>
+      <div class="proj-modal-section">
+        <div class="proj-modal-label">My Role</div>
+        <div class="proj-modal-text">${p.role}</div>
+      </div>
+    </div>
+    <div>
+      <div class="proj-modal-section">
+        <div class="proj-modal-label">Process</div>
+        <div class="proj-modal-text">${p.process}</div>
+      </div>
+    </div>
+    <div class="proj-modal-metrics">
+      ${p.metrics.map(m => `<div class="proj-metric"><div class="proj-metric-val">${m.val}</div><div class="proj-metric-label">${m.label}</div></div>`).join('')}
+    </div>
+  `;
+  overlay.classList.add('open');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  overlay.classList.remove('open');
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.proj-card').forEach(card => {
+  card.addEventListener('click', () => openModal(card.dataset.id));
+});
+overlay.addEventListener('click', closeModal);
+modalClose.addEventListener('click', closeModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
 </body>
 </html>
