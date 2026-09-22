@@ -1284,222 +1284,181 @@ footer{
           <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg">
             <rect width="880" height="300" fill="#060d18"/>
             <defs>
-              <radialGradient id="ccrGlow" cx="50%" cy="40%" r="60%">
-                <stop offset="0%" stop-color="#003a6e" stop-opacity=".35"/>
+              <radialGradient id="ccrGlow2" cx="50%" cy="40%" r="65%">
+                <stop offset="0%" stop-color="#003a6e" stop-opacity=".4"/>
                 <stop offset="100%" stop-color="#060d18" stop-opacity="0"/>
               </radialGradient>
             </defs>
-            <rect width="880" height="300" fill="url(#ccrGlow)"/>
+            <rect width="880" height="300" fill="url(#ccrGlow2)"/>
 
-            <!-- ── 5 SCREENS ── -->
-            <!-- Screen bezels -->
-            <!-- S1 far-left -->
-            <rect x="16" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
-            <!-- S2 left -->
-            <rect x="172" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
-            <!-- S3 CENTER (taller) -->
-            <rect x="328" y="8" width="224" height="212" rx="5" fill="#07101c" stroke="#00d4ff" stroke-width="1.5" opacity=".7"/>
-            <!-- S4 right -->
-            <rect x="560" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
-            <!-- S5 far-right -->
-            <rect x="716" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
+            <!-- LAYOUT: S1=Media(left), S2+S3=Map(2 screens wide center), S4=KPI, S5=Resources -->
+            <!-- S1: Media & Schedules (x16, w156) -->
+            <rect x="16" y="14" width="156" height="204" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
+            <!-- S2+S3: City Map — spans 2 screens (x180, w364) -->
+            <rect x="180" y="6" width="364" height="220" rx="5" fill="#07101c" stroke="#00d4ff" stroke-width="1.5" opacity=".75"/>
+            <!-- S4: KPI Dashboards (x552, w156) -->
+            <rect x="552" y="14" width="156" height="204" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
+            <!-- S5: Resource Tracking (x716, w148) -->
+            <rect x="716" y="14" width="148" height="204" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
 
-            <!-- ── S1: Media / Broadcast Feed ── -->
-            <rect x="19" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
-            <rect x="23" y="22" width="50" height="6" rx="2" fill="#3a7bd5" opacity=".7"/>
-            <rect x="148" y="22" width="8" height="6" rx="2" fill="#f87171" opacity=".8"/>
-            <!-- video frames -->
-            <rect x="19" y="34" width="142" height="80" rx="2" fill="#0a1828"/>
-            <rect x="25" y="38" width="60" height="38" rx="2" fill="#0d2040"/>
-            <rect x="27" y="40" width="56" height="34" rx="1" fill="#071530"/>
-            <rect x="37" y="54" width="36" height="6" rx="2" fill="#3a7bd5" opacity=".5"/>
-            <rect x="91" y="38" width="64" height="38" rx="2" fill="#0d2040"/>
-            <rect x="93" y="40" width="60" height="34" rx="1" fill="#071a35"/>
-            <rect x="100" y="54" width="40" height="6" rx="2" fill="#3a7bd5" opacity=".5"/>
-            <!-- ticker -->
-            <rect x="19" y="116" width="142" height="14" rx="2" fill="#071020"/>
-            <rect x="23" y="120" width="100" height="6" rx="2" fill="#1a4070" opacity=".8"/>
-            <!-- schedule list -->
-            <rect x="19" y="133" width="142" height="76" rx="2" fill="#07101c"/>
-            <rect x="23" y="139" width="6" height="6" rx="3" fill="#47d4a0"/>
-            <rect x="33" y="140" width="80" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
-            <rect x="118" y="140" width="36" height="5" rx="2" fill="#1a4070" opacity=".6"/>
-            <rect x="23" y="151" width="6" height="6" rx="3" fill="#47d4a0"/>
-            <rect x="33" y="152" width="65" height="5" rx="2" fill="#2a5a40" opacity=".7"/>
-            <rect x="118" y="152" width="36" height="5" rx="2" fill="#1a4070" opacity=".6"/>
-            <rect x="23" y="163" width="6" height="6" rx="3" fill="#fbbf24"/>
-            <rect x="33" y="164" width="72" height="5" rx="2" fill="#5a4a20" opacity=".8"/>
-            <rect x="118" y="164" width="36" height="5" rx="2" fill="#1a4070" opacity=".6"/>
-            <rect x="23" y="175" width="6" height="6" rx="3" fill="#f87171"/>
-            <rect x="33" y="176" width="58" height="5" rx="2" fill="#5a2020" opacity=".8"/>
-            <rect x="23" y="187" width="6" height="6" rx="3" fill="#3a7bd5"/>
-            <rect x="33" y="188" width="74" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
-            <!-- label -->
-            <text x="90" y="224" text-anchor="middle" fill="#3a7bd5" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">MEDIA &amp; SCHEDULES</text>
+            <!-- ── S1: Media & Schedules ── -->
+            <rect x="19" y="17" width="150" height="12" rx="3" fill="#0d1e30"/>
+            <rect x="23" y="20" width="55" height="6" rx="2" fill="#3a7bd5" opacity=".7"/>
+            <rect x="155" y="20" width="8" height="6" rx="2" fill="#f87171" opacity=".8"/>
+            <!-- video thumbnails -->
+            <rect x="19" y="32" width="150" height="76" rx="2" fill="#0a1828"/>
+            <rect x="24" y="36" width="64" height="36" rx="2" fill="#071530"/>
+            <rect x="36" y="50" width="38" height="6" rx="2" fill="#3a7bd5" opacity=".5"/>
+            <rect x="95" y="36" width="67" height="36" rx="2" fill="#071a35"/>
+            <rect x="104" y="50" width="42" height="6" rx="2" fill="#3a7bd5" opacity=".5"/>
+            <!-- news ticker -->
+            <rect x="19" y="111" width="150" height="14" rx="2" fill="#071020"/>
+            <rect x="23" y="115" width="110" height="6" rx="2" fill="#1a4070" opacity=".8"/>
+            <!-- schedule -->
+            <rect x="19" y="128" width="150" height="86" rx="2" fill="#07101c"/>
+            <rect x="23" y="134" width="6" height="6" rx="3" fill="#47d4a0"/>
+            <rect x="33" y="135" width="86" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="135" y="135" width="27" height="5" rx="2" fill="#1a4070" opacity=".6"/>
+            <rect x="23" y="147" width="6" height="6" rx="3" fill="#47d4a0"/>
+            <rect x="33" y="148" width="70" height="5" rx="2" fill="#2a5a40" opacity=".7"/>
+            <rect x="135" y="148" width="27" height="5" rx="2" fill="#1a4070" opacity=".6"/>
+            <rect x="23" y="160" width="6" height="6" rx="3" fill="#fbbf24"/>
+            <rect x="33" y="161" width="78" height="5" rx="2" fill="#5a4a20" opacity=".8"/>
+            <rect x="23" y="173" width="6" height="6" rx="3" fill="#f87171"/>
+            <rect x="33" y="174" width="60" height="5" rx="2" fill="#5a2020" opacity=".8"/>
+            <rect x="23" y="186" width="6" height="6" rx="3" fill="#3a7bd5"/>
+            <rect x="33" y="187" width="80" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <rect x="23" y="199" width="6" height="6" rx="3" fill="#47d4a0"/>
+            <rect x="33" y="200" width="68" height="5" rx="2" fill="#2a5a40" opacity=".7"/>
+            <text x="97" y="228" text-anchor="middle" fill="#3a7bd5" font-size="8" font-family="Inter,sans-serif" opacity=".55" font-weight="600">MEDIA &amp; SCHEDULES</text>
 
-            <!-- ── S2: Incident / Alert Feed ── -->
-            <rect x="175" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
-            <rect x="179" y="22" width="55" height="6" rx="2" fill="#f87171" opacity=".7"/>
-            <rect x="248" y="22" width="30" height="6" rx="7" fill="#f87171" opacity=".25"/>
-            <rect x="252" y="24" width="22" height="2" rx="1" fill="#f87171" opacity=".6"/>
-            <!-- alert cards -->
-            <rect x="175" y="34" width="142" height="36" rx="3" fill="#1a0a0a" stroke="#f87171" stroke-width="1" opacity=".7"/>
-            <rect x="179" y="38" width="8" height="8" rx="4" fill="#f87171"/>
-            <rect x="192" y="39" width="80" height="6" rx="2" fill="#8a3030" opacity=".9"/>
-            <rect x="192" y="49" width="55" height="4" rx="2" fill="#5a2020" opacity=".7"/>
-            <rect x="280" y="39" width="30" height="6" rx="3" fill="#f87171" opacity=".25"/>
-            <rect x="283" y="41" width="24" height="2" rx="1" fill="#f87171" opacity=".8"/>
-            <rect x="175" y="74" width="142" height="30" rx="3" fill="#0d1a10" stroke="#fbbf24" stroke-width="1" opacity=".6"/>
-            <rect x="179" y="78" width="8" height="8" rx="4" fill="#fbbf24"/>
-            <rect x="192" y="79" width="72" height="6" rx="2" fill="#6a5a20" opacity=".9"/>
-            <rect x="192" y="89" width="48" height="4" rx="2" fill="#4a4020" opacity=".7"/>
-            <rect x="175" y="108" width="142" height="30" rx="3" fill="#071530" stroke="#3a7bd5" stroke-width="1" opacity=".5"/>
-            <rect x="179" y="112" width="8" height="8" rx="4" fill="#3a7bd5"/>
-            <rect x="192" y="113" width="68" height="6" rx="2" fill="#1a3a6a" opacity=".9"/>
-            <rect x="192" y="123" width="44" height="4" rx="2" fill="#0e2850" opacity=".7"/>
-            <!-- status summary -->
-            <rect x="175" y="142" width="142" height="66" rx="3" fill="#07101c"/>
-            <rect x="179" y="147" width="40" height="5" rx="2" fill="#888" opacity=".5"/>
-            <rect x="179" y="158" width="24" height="16" rx="3" fill="#f87171" opacity=".2"/>
-            <text x="191" y="170" text-anchor="middle" fill="#f87171" font-size="9" font-weight="800" font-family="Inter,sans-serif">3</text>
-            <rect x="209" y="158" width="24" height="16" rx="3" fill="#fbbf24" opacity=".2"/>
-            <text x="221" y="170" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="800" font-family="Inter,sans-serif">7</text>
-            <rect x="239" y="158" width="24" height="16" rx="3" fill="#47d4a0" opacity=".2"/>
-            <text x="251" y="170" text-anchor="middle" fill="#47d4a0" font-size="9" font-weight="800" font-family="Inter,sans-serif">24</text>
-            <rect x="179" y="179" width="60" height="5" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="248" y="179" width="62" height="5" rx="2" fill="#1a4070" opacity=".4"/>
-            <!-- label -->
-            <text x="246" y="224" text-anchor="middle" fill="#f87171" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">INCIDENTS &amp; ALERTS</text>
-
-            <!-- ── S3 CENTER: City Operations Map ── -->
-            <!-- map bg -->
-            <rect x="331" y="11" width="218" height="206" rx="3" fill="#061020"/>
-            <!-- grid lines -->
-            <line x1="331" y1="50" x2="549" y2="50" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="331" y1="85" x2="549" y2="85" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="331" y1="120" x2="549" y2="120" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="331" y1="155" x2="549" y2="155" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="331" y1="190" x2="549" y2="190" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="370" y1="11" x2="370" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="410" y1="11" x2="410" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="450" y1="11" x2="450" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="490" y1="11" x2="490" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
-            <line x1="530" y1="11" x2="530" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <!-- ── S2+S3: City Operations Map (2 screens wide) ── -->
+            <rect x="183" y="9" width="358" height="214" rx="3" fill="#061020"/>
+            <!-- map grid -->
+            <line x1="183" y1="55" x2="541" y2="55" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="183" y1="100" x2="541" y2="100" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="183" y1="145" x2="541" y2="145" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="183" y1="190" x2="541" y2="190" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="235" y1="9" x2="235" y2="223" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="290" y1="9" x2="290" y2="223" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="345" y1="9" x2="345" y2="223" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="400" y1="9" x2="400" y2="223" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="455" y1="9" x2="455" y2="223" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
+            <line x1="510" y1="9" x2="510" y2="223" stroke="#0c1e38" stroke-width="1" opacity=".6"/>
             <!-- road network -->
-            <path d="M340 130 Q380 100 440 108 Q500 116 545 95" fill="none" stroke="#0e2850" stroke-width="3" opacity=".8"/>
-            <path d="M340 155 Q390 148 440 150 Q490 152 545 140" fill="none" stroke="#0e2850" stroke-width="2" opacity=".6"/>
-            <path d="M395 11 Q400 60 398 108 Q396 160 394 217" fill="none" stroke="#0e2850" stroke-width="2" opacity=".6"/>
-            <path d="M460 11 Q458 80 462 130 Q466 180 462 217" fill="none" stroke="#0e2850" stroke-width="2" opacity=".6"/>
-            <!-- pulse zones -->
-            <circle cx="440" cy="108" r="28" fill="#00d4ff" opacity=".05"/>
-            <circle cx="440" cy="108" r="18" fill="#00d4ff" opacity=".08"/>
-            <circle cx="440" cy="108" r="10" fill="#00d4ff" opacity=".2"/>
-            <circle cx="440" cy="108" r="4" fill="#00d4ff" opacity=".9"/>
+            <path d="M190 120 Q260 95 362 105 Q464 115 538 88" fill="none" stroke="#0f2a50" stroke-width="4" opacity=".9"/>
+            <path d="M190 155 Q280 148 362 150 Q444 152 538 136" fill="none" stroke="#0f2a50" stroke-width="2.5" opacity=".7"/>
+            <path d="M190 80 Q250 88 290 105 Q320 120 310 180 Q305 210 308 223" fill="none" stroke="#0f2a50" stroke-width="2" opacity=".6"/>
+            <path d="M370 9 Q365 60 368 105 Q371 160 366 223" fill="none" stroke="#0f2a50" stroke-width="2.5" opacity=".7"/>
+            <path d="M445 9 Q442 70 448 120 Q454 170 449 223" fill="none" stroke="#0f2a50" stroke-width="2" opacity=".6"/>
+            <path d="M510 9 Q508 55 514 100 Q518 145 512 223" fill="none" stroke="#0f2a50" stroke-width="2" opacity=".5"/>
+            <!-- city centre pulse -->
+            <circle cx="362" cy="105" r="42" fill="#00d4ff" opacity=".04"/>
+            <circle cx="362" cy="105" r="28" fill="#00d4ff" opacity=".07"/>
+            <circle cx="362" cy="105" r="16" fill="#00d4ff" opacity=".14"/>
+            <circle cx="362" cy="105" r="7" fill="#00d4ff" opacity=".85"/>
+            <!-- zone highlight -->
+            <rect x="300" y="70" width="124" height="90" rx="8" fill="#00d4ff" opacity=".03" stroke="#00d4ff" stroke-width="1" stroke-dasharray="4 3" opacity=".2"/>
             <!-- incident markers -->
-            <circle cx="390" cy="130" r="6" fill="#f87171" opacity=".8"/>
-            <circle cx="390" cy="130" r="12" fill="#f87171" opacity=".12"/>
-            <circle cx="500" cy="95" r="5" fill="#fbbf24" opacity=".8"/>
-            <circle cx="500" cy="95" r="10" fill="#fbbf24" opacity=".12"/>
-            <circle cx="355" cy="80" r="4" fill="#47d4a0" opacity=".8"/>
-            <circle cx="475" cy="160" r="4" fill="#47d4a0" opacity=".8"/>
-            <circle cx="535" cy="150" r="5" fill="#fbbf24" opacity=".7"/>
-            <!-- top HUD bar -->
-            <rect x="331" y="11" width="218" height="18" rx="3" fill="#07101c" opacity=".95"/>
-            <rect x="335" y="15" width="40" height="6" rx="2" fill="#00d4ff" opacity=".5"/>
-            <circle cx="520" cy="18" r="4" fill="#47d4a0" opacity=".8"/>
-            <rect x="526" y="15" width="18" height="6" rx="2" fill="#2a5a40" opacity=".7"/>
-            <!-- label -->
-            <text x="440" y="230" text-anchor="middle" fill="#00d4ff" font-size="9" font-family="Inter,sans-serif" opacity=".7" font-weight="700">CITY OPERATIONS MAP</text>
+            <circle cx="265" cy="138" r="7" fill="#f87171" opacity=".85"/>
+            <circle cx="265" cy="138" r="14" fill="#f87171" opacity=".1"/>
+            <circle cx="490" cy="90" r="6" fill="#fbbf24" opacity=".85"/>
+            <circle cx="490" cy="90" r="12" fill="#fbbf24" opacity=".1"/>
+            <circle cx="210" cy="80" r="5" fill="#47d4a0" opacity=".8"/>
+            <circle cx="430" cy="162" r="5" fill="#47d4a0" opacity=".8"/>
+            <circle cx="528" cy="148" r="6" fill="#fbbf24" opacity=".75"/>
+            <circle cx="320" cy="178" r="4" fill="#47d4a0" opacity=".7"/>
+            <!-- HUD top bar -->
+            <rect x="183" y="9" width="358" height="20" rx="3" fill="#07101c" opacity=".96"/>
+            <rect x="188" y="14" width="50" height="6" rx="2" fill="#00d4ff" opacity=".5"/>
+            <circle cx="504" cy="17" r="4" fill="#47d4a0" opacity=".8"/>
+            <rect x="511" y="14" width="22" height="6" rx="2" fill="#2a5a40" opacity=".7"/>
+            <!-- screen divider (bezel between S2 and S3) -->
+            <line x1="362" y1="9" x2="362" y2="223" stroke="#060d18" stroke-width="4"/>
+            <text x="362" y="235" text-anchor="middle" fill="#00d4ff" font-size="9" font-family="Inter,sans-serif" opacity=".65" font-weight="700">CITY OPERATIONS MAP</text>
 
             <!-- ── S4: KPI Dashboards ── -->
-            <rect x="563" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
-            <rect x="567" y="22" width="55" height="6" rx="2" fill="#3a7bd5" opacity=".7"/>
-            <!-- KPI tiles -->
-            <rect x="563" y="34" width="68" height="44" rx="4" fill="#071530"/>
-            <text x="597" y="56" text-anchor="middle" fill="#00d4ff" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">98%</text>
-            <rect x="571" y="62" width="52" height="5" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="637" y="34" width="68" height="44" rx="4" fill="#071530"/>
-            <text x="671" y="56" text-anchor="middle" fill="#47d4a0" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">4.2K</text>
-            <rect x="645" y="62" width="46" height="5" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="563" y="82" width="68" height="44" rx="4" fill="#071530"/>
-            <text x="597" y="104" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">12m</text>
-            <rect x="571" y="110" width="52" height="5" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="637" y="82" width="68" height="44" rx="4" fill="#071530"/>
-            <text x="671" y="104" text-anchor="middle" fill="#a78bfa" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">99.9</text>
-            <rect x="645" y="110" width="46" height="5" rx="2" fill="#1a4070" opacity=".5"/>
-            <!-- trend chart -->
-            <rect x="563" y="130" width="142" height="78" rx="4" fill="#071530"/>
-            <rect x="567" y="134" width="50" height="5" rx="2" fill="#1a4070" opacity=".6"/>
-            <polyline points="570,195 592,178 614,185 636,162 658,170 680,148 702,155" fill="none" stroke="#00d4ff" stroke-width="2" opacity=".8"/>
-            <polyline points="570,195 592,178 614,185 636,162 658,170 680,148 702,155 702,200 570,200" fill="#00d4ff" opacity=".05"/>
-            <polyline points="570,200 592,190 614,193 636,183 658,186 680,176 702,180" fill="none" stroke="#47d4a0" stroke-width="1.5" opacity=".6" stroke-dasharray="3 2"/>
-            <!-- label -->
-            <text x="634" y="224" text-anchor="middle" fill="#3a7bd5" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">KPI DASHBOARDS</text>
+            <rect x="555" y="17" width="150" height="12" rx="3" fill="#0d1e30"/>
+            <rect x="559" y="20" width="60" height="6" rx="2" fill="#3a7bd5" opacity=".7"/>
+            <rect x="555" y="32" width="72" height="46" rx="4" fill="#071530"/>
+            <text x="591" y="56" text-anchor="middle" fill="#00d4ff" font-size="17" font-weight="800" font-family="Inter,sans-serif" opacity=".9">98%</text>
+            <rect x="563" y="62" width="54" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="633" y="32" width="72" height="46" rx="4" fill="#071530"/>
+            <text x="669" y="56" text-anchor="middle" fill="#47d4a0" font-size="17" font-weight="800" font-family="Inter,sans-serif" opacity=".9">4.2K</text>
+            <rect x="641" y="62" width="48" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="555" y="82" width="72" height="46" rx="4" fill="#071530"/>
+            <text x="591" y="106" text-anchor="middle" fill="#fbbf24" font-size="17" font-weight="800" font-family="Inter,sans-serif" opacity=".9">12m</text>
+            <rect x="563" y="112" width="54" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="633" y="82" width="72" height="46" rx="4" fill="#071530"/>
+            <text x="669" y="106" text-anchor="middle" fill="#a78bfa" font-size="17" font-weight="800" font-family="Inter,sans-serif" opacity=".9">99.9</text>
+            <rect x="641" y="112" width="48" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="555" y="132" width="150" height="80" rx="4" fill="#071530"/>
+            <rect x="559" y="137" width="54" height="5" rx="2" fill="#1a4070" opacity=".6"/>
+            <polyline points="562,202 580,186 600,192 622,168 644,175 666,153 700,160" fill="none" stroke="#00d4ff" stroke-width="2" opacity=".8"/>
+            <polyline points="562,202 580,186 600,192 622,168 644,175 666,153 700,160 700,207 562,207" fill="#00d4ff" opacity=".05"/>
+            <polyline points="562,207 580,198 600,201 622,192 644,194 666,184 700,188" fill="none" stroke="#47d4a0" stroke-width="1.5" opacity=".5" stroke-dasharray="3 2"/>
+            <text x="630" y="228" text-anchor="middle" fill="#3a7bd5" font-size="8" font-family="Inter,sans-serif" opacity=".55" font-weight="600">KPI DASHBOARDS</text>
 
             <!-- ── S5: Resource Tracking ── -->
-            <rect x="719" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
-            <rect x="723" y="22" width="60" height="6" rx="2" fill="#a78bfa" opacity=".7"/>
-            <!-- resource unit list -->
-            <rect x="719" y="34" width="142" height="170" rx="3" fill="#07101c"/>
-            <!-- unit rows -->
-            <rect x="723" y="40" width="130" height="22" rx="3" fill="#0e1e38"/>
-            <circle cx="733" cy="51" r="5" fill="#47d4a0"/>
-            <rect x="742" y="46" width="60" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
-            <rect x="742" y="54" width="40" height="4" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="820" y="46" width="26" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
-            <rect x="824" y="49" width="18" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
-
-            <rect x="723" y="66" width="130" height="22" rx="3" fill="#0e1e38"/>
-            <circle cx="733" cy="77" r="5" fill="#47d4a0"/>
-            <rect x="742" y="72" width="55" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
-            <rect x="742" y="80" width="42" height="4" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="820" y="72" width="26" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
-            <rect x="824" y="75" width="18" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
-
-            <rect x="723" y="92" width="130" height="22" rx="3" fill="#1a0a0a"/>
-            <circle cx="733" cy="103" r="5" fill="#f87171"/>
-            <rect x="742" y="98" width="68" height="5" rx="2" fill="#5a2020" opacity=".8"/>
-            <rect x="742" y="106" width="38" height="4" rx="2" fill="#3a1010" opacity=".7"/>
-            <rect x="820" y="98" width="26" height="10" rx="5" fill="#f87171" opacity=".2"/>
-            <rect x="824" y="101" width="18" height="4" rx="2" fill="#f87171" opacity=".7"/>
-
-            <rect x="723" y="118" width="130" height="22" rx="3" fill="#0e1e38"/>
-            <circle cx="733" cy="129" r="5" fill="#fbbf24"/>
-            <rect x="742" y="124" width="50" height="5" rx="2" fill="#5a4a20" opacity=".8"/>
-            <rect x="742" y="132" width="44" height="4" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="820" y="124" width="26" height="10" rx="5" fill="#fbbf24" opacity=".2"/>
-            <rect x="824" y="127" width="18" height="4" rx="2" fill="#fbbf24" opacity=".7"/>
-
-            <rect x="723" y="144" width="130" height="22" rx="3" fill="#0e1e38"/>
-            <circle cx="733" cy="155" r="5" fill="#47d4a0"/>
-            <rect x="742" y="150" width="62" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
-            <rect x="742" y="158" width="36" height="4" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="820" y="150" width="26" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
-            <rect x="824" y="153" width="18" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
-
-            <rect x="723" y="170" width="130" height="22" rx="3" fill="#0e1e38"/>
-            <circle cx="733" cy="181" r="5" fill="#3a7bd5"/>
-            <rect x="742" y="176" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".8"/>
-            <rect x="742" y="184" width="42" height="4" rx="2" fill="#1a4070" opacity=".5"/>
-            <rect x="820" y="176" width="26" height="10" rx="5" fill="#3a7bd5" opacity=".2"/>
-            <rect x="824" y="179" width="18" height="4" rx="2" fill="#3a7bd5" opacity=".7"/>
-            <!-- label -->
-            <text x="790" y="224" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">RESOURCE TRACKING</text>
+            <rect x="719" y="17" width="142" height="12" rx="3" fill="#0d1e30"/>
+            <rect x="723" y="20" width="64" height="6" rx="2" fill="#a78bfa" opacity=".7"/>
+            <rect x="719" y="32" width="142" height="180" rx="3" fill="#07101c"/>
+            <rect x="723" y="38" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="49" r="5" fill="#47d4a0"/>
+            <rect x="742" y="44" width="62" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="742" y="52" width="42" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="822" y="44" width="24" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
+            <rect x="826" y="47" width="16" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
+            <rect x="723" y="64" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="75" r="5" fill="#47d4a0"/>
+            <rect x="742" y="70" width="56" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="742" y="78" width="44" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="822" y="70" width="24" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
+            <rect x="826" y="73" width="16" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
+            <rect x="723" y="90" width="130" height="22" rx="3" fill="#1a0a0a"/>
+            <circle cx="733" cy="101" r="5" fill="#f87171"/>
+            <rect x="742" y="96" width="70" height="5" rx="2" fill="#5a2020" opacity=".8"/>
+            <rect x="742" y="104" width="38" height="4" rx="2" fill="#3a1010" opacity=".7"/>
+            <rect x="822" y="96" width="24" height="10" rx="5" fill="#f87171" opacity=".2"/>
+            <rect x="826" y="99" width="16" height="4" rx="2" fill="#f87171" opacity=".7"/>
+            <rect x="723" y="116" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="127" r="5" fill="#fbbf24"/>
+            <rect x="742" y="122" width="52" height="5" rx="2" fill="#5a4a20" opacity=".8"/>
+            <rect x="742" y="130" width="46" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="822" y="122" width="24" height="10" rx="5" fill="#fbbf24" opacity=".2"/>
+            <rect x="826" y="125" width="16" height="4" rx="2" fill="#fbbf24" opacity=".7"/>
+            <rect x="723" y="142" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="153" r="5" fill="#47d4a0"/>
+            <rect x="742" y="148" width="64" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="742" y="156" width="38" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="822" y="148" width="24" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
+            <rect x="826" y="151" width="16" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
+            <rect x="723" y="168" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="179" r="5" fill="#3a7bd5"/>
+            <rect x="742" y="174" width="60" height="5" rx="2" fill="#1a3a6a" opacity=".8"/>
+            <rect x="742" y="182" width="44" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="822" y="174" width="24" height="10" rx="5" fill="#3a7bd5" opacity=".2"/>
+            <rect x="826" y="177" width="16" height="4" rx="2" fill="#3a7bd5" opacity=".7"/>
+            <rect x="723" y="194" width="130" height="16" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="202" r="5" fill="#a78bfa"/>
+            <rect x="742" y="198" width="54" height="5" rx="2" fill="#3a2a6a" opacity=".8"/>
+            <rect x="822" y="198" width="24" height="10" rx="5" fill="#a78bfa" opacity=".2"/>
+            <rect x="826" y="201" width="16" height="4" rx="2" fill="#a78bfa" opacity=".7"/>
+            <text x="790" y="228" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="Inter,sans-serif" opacity=".55" font-weight="600">RESOURCE TRACKING</text>
 
             <!-- ── OPERATOR DESK ── -->
-            <rect x="180" y="242" width="520" height="44" rx="8" fill="#0a1628" stroke="#1a3a6a" stroke-width="1"/>
-            <rect x="196" y="252" width="90" height="26" rx="4" fill="#071018"/>
-            <rect x="302" y="252" width="90" height="26" rx="4" fill="#071018"/>
-            <rect x="408" y="252" width="90" height="26" rx="4" fill="#071018"/>
-            <rect x="514" y="252" width="90" height="26" rx="4" fill="#071018"/>
-            <rect x="202" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
-            <rect x="202" y="267" width="70" height="4" rx="2" fill="#1a3a6a" opacity=".4"/>
-            <rect x="308" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
-            <rect x="414" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
-            <rect x="520" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
-
-            <!-- ambient screen glow -->
-            <rect x="328" y="8" width="224" height="212" rx="5" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity=".2"/>
+            <rect x="140" y="244" width="600" height="44" rx="8" fill="#0a1628" stroke="#1a3a6a" stroke-width="1"/>
+            <rect x="158" y="254" width="100" height="26" rx="4" fill="#071018"/>
+            <rect x="272" y="254" width="100" height="26" rx="4" fill="#071018"/>
+            <rect x="390" y="254" width="100" height="26" rx="4" fill="#071018"/>
+            <rect x="510" y="254" width="100" height="26" rx="4" fill="#071018"/>
+            <rect x="164" y="260" width="64" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <rect x="164" y="269" width="80" height="4" rx="2" fill="#1a3a6a" opacity=".4"/>
+            <rect x="278" y="260" width="64" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <rect x="396" y="260" width="64" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <rect x="516" y="260" width="64" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <!-- center screen glow -->
+            <rect x="180" y="6" width="364" height="220" rx="5" fill="none" stroke="#00d4ff" stroke-width="1" opacity=".18"/>
           </svg>
         </div>
         <div class="proj-info">
@@ -1523,7 +1482,7 @@ footer{
     <div class="s-label">Let's connect</div>
     <h1 class="contact-big reveal">Let's create<br/><em>experiences<br/>people remember.</em></h1>
     <div class="contact-links reveal">
-      <a href="mailto:tmzcecilia@gmail.com" class="clink filled">✉ tmzcecilia@gmail.com</a>
+      <a href="mailto:tmzcecilia@gmail.com" class="clink filled" style="display:none">✉ tmzcecilia@gmail.com</a>
       <a href="https://www.linkedin.com/in/dai-min-zhen-cecilia/" class="clink" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a href="https://www.youtube.com/@workccly" class="clink" target="_blank" rel="noopener">YouTube ↗</a>
       <a href="CeciliaDai-Resume-2026.pdf" class="clink" download>Resume PDF ↓</a>
@@ -2491,6 +2450,15 @@ const PROJECTS = {
     process: 'Ran 3 brand workshops with founders to extract core values and personality. Explored 4 distinct visual directions before landing on a warm, human-forward identity that stood apart from the cold, utilitarian fintech aesthetic of competitors.',
     metrics: [{ val: '4wk', label: 'Brief to delivery' }, { val: '6', label: 'Brand touchpoints' }, { val: '100%', label: 'Founder satisfaction' }],
     svgId: 'modal-svg-05'
+  },
+  '07': {
+    tag: 'Command & Control · Video Wall · UX',
+    title: 'Command & Control Centre — Video Wall',
+    year: '2024',
+    overview: 'Designed the full UX and content strategy for a 5-screen video wall in a national command & control operations room. The wall is the primary situational awareness surface for operators managing city-wide events, incidents, and resource deployment in real time.',
+    role: 'Lead UX Designer. Responsible for stakeholder discovery, information architecture, screen zone strategy, and visual design of all panel layouts. Worked directly with operations managers, control room supervisors, and technical integrators to ensure the design matched real operator workflows.',
+    process: 'Conducted contextual research sessions observing operators during live shifts to understand how information was consumed under pressure. Ran co-design workshops with stakeholders to define the 3-zone layout: left screens for media feeds and event schedules, centre 2 screens for the live city operations map with incident overlays, and right screens for KPI dashboards and resource tracking. Iterated through 6 layout concepts before landing on the final hierarchy, validated against operator mental models and response-time requirements.',
+    metrics: [{ val: '5', label: 'Screens designed' }, { val: '3', label: 'Content zones' }, { val: '6', label: 'Layout iterations' }]
   }
 };
 
