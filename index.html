@@ -1472,6 +1472,158 @@ footer{
         </div>
       </div>
 
+      <!-- 08 Event Operations Kanban -->
+      <div class="proj-card wide reveal" data-id="08">
+        <div class="proj-arrow">↗</div>
+        <div class="proj-mockup">
+          <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg">
+            <rect width="880" height="280" fill="#0f0f14"/>
+            <defs>
+              <radialGradient id="kbGlow" cx="50%" cy="30%" r="60%">
+                <stop offset="0%" stop-color="#1a1040" stop-opacity=".6"/>
+                <stop offset="100%" stop-color="#0f0f14" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="880" height="280" fill="url(#kbGlow)"/>
+
+            <!-- ── TOP BAR ── -->
+            <rect x="0" y="0" width="880" height="36" rx="0" fill="#0a0a10"/>
+            <rect x="20" y="12" width="90" height="12" rx="4" fill="#1a1a2e"/>
+            <rect x="24" y="15" width="56" height="6" rx="2" fill="#a78bfa" opacity=".7"/>
+            <!-- view toggles -->
+            <rect x="340" y="10" width="60" height="16" rx="8" fill="#a78bfa" opacity=".2"/>
+            <rect x="344" y="14" width="52" height="8" rx="4" fill="#a78bfa" opacity=".5"/>
+            <rect x="408" y="10" width="60" height="16" rx="8" fill="#1a1a2e"/>
+            <rect x="412" y="14" width="52" height="8" rx="4" fill="#444" opacity=".5"/>
+            <!-- avatar + add button -->
+            <rect x="800" y="10" width="60" height="16" rx="8" fill="#a78bfa" opacity=".15"/>
+            <rect x="812" y="14" width="36" height="8" rx="3" fill="#a78bfa" opacity=".5"/>
+
+            <!-- ── COLUMN HEADERS ── -->
+            <!-- PRE-EVENT -->
+            <rect x="16" y="46" width="264" height="26" rx="6" fill="#1a1030"/>
+            <circle cx="30" cy="59" r="5" fill="#818cf8"/>
+            <rect x="40" y="54" width="70" height="10" rx="3" fill="#818cf8" opacity=".7"/>
+            <rect x="246" y="52" width="24" height="14" rx="7" fill="#818cf8" opacity=".2"/>
+            <rect x="252" y="56" width="12" height="6" rx="3" fill="#818cf8" opacity=".6"/>
+            <!-- LIVE -->
+            <rect x="308" y="46" width="264" height="26" rx="6" fill="#0d1f10"/>
+            <circle cx="322" cy="59" r="5" fill="#47d4a0"/>
+            <rect x="332" y="54" width="36" height="10" rx="3" fill="#47d4a0" opacity=".7"/>
+            <rect x="538" y="52" width="24" height="14" rx="7" fill="#47d4a0" opacity=".2"/>
+            <rect x="544" y="56" width="12" height="6" rx="3" fill="#47d4a0" opacity=".6"/>
+            <!-- POST-EVENT -->
+            <rect x="600" y="46" width="264" height="26" rx="6" fill="#1a0f0a"/>
+            <circle cx="614" cy="59" r="5" fill="#fb923c"/>
+            <rect x="624" y="54" width="72" height="10" rx="3" fill="#fb923c" opacity=".7"/>
+            <rect x="830" y="52" width="24" height="14" rx="7" fill="#fb923c" opacity=".2"/>
+            <rect x="836" y="56" width="12" height="6" rx="3" fill="#fb923c" opacity=".6"/>
+
+            <!-- ── PRE-EVENT CARDS ── -->
+            <!-- Card 1 -->
+            <rect x="16" y="80" width="264" height="62" rx="8" fill="#16112a" stroke="#2d2060" stroke-width="1"/>
+            <rect x="24" y="90" width="50" height="14" rx="7" fill="#818cf8" opacity=".18"/>
+            <rect x="28" y="93" width="38" height="6" rx="3" fill="#818cf8" opacity=".6"/>
+            <rect x="24" y="110" width="140" height="7" rx="3" fill="#c4b5fd" opacity=".7"/>
+            <rect x="24" y="122" width="96" height="6" rx="3" fill="#6b6a80" opacity=".5"/>
+            <circle cx="220" cy="111" r="8" fill="#818cf8" opacity=".15"/>
+            <circle cx="234" cy="111" r="8" fill="#a78bfa" opacity=".12"/>
+            <rect x="248" y="107" width="24" height="14" rx="7" fill="#fbbf24" opacity=".15"/>
+            <rect x="252" y="111" width="16" height="6" rx="3" fill="#fbbf24" opacity=".5"/>
+            <!-- Card 2 -->
+            <rect x="16" y="150" width="264" height="62" rx="8" fill="#16112a" stroke="#2d2060" stroke-width="1"/>
+            <rect x="24" y="160" width="62" height="14" rx="7" fill="#818cf8" opacity=".18"/>
+            <rect x="28" y="163" width="50" height="6" rx="3" fill="#818cf8" opacity=".6"/>
+            <rect x="24" y="180" width="160" height="7" rx="3" fill="#c4b5fd" opacity=".7"/>
+            <rect x="24" y="192" width="110" height="6" rx="3" fill="#6b6a80" opacity=".5"/>
+            <rect x="240" y="177" width="32" height="14" rx="7" fill="#47d4a0" opacity=".15"/>
+            <rect x="244" y="181" width="24" height="6" rx="3" fill="#47d4a0" opacity=".5"/>
+            <!-- Card 3 dragging — lifted with shadow -->
+            <rect x="20" y="222" width="260" height="50" rx="8" fill="#1e1640" stroke="#a78bfa" stroke-width="1.5" opacity=".9"/>
+            <rect x="0" y="218" width="300" height="58" rx="10" fill="#a78bfa" opacity=".04"/>
+            <rect x="28" y="230" width="56" height="14" rx="7" fill="#a78bfa" opacity=".25"/>
+            <rect x="32" y="233" width="44" height="6" rx="3" fill="#a78bfa" opacity=".65"/>
+            <rect x="28" y="249" width="148" height="7" rx="3" fill="#c4b5fd" opacity=".6"/>
+            <!-- drag handle dots -->
+            <circle cx="256" cy="242" r="2" fill="#a78bfa" opacity=".4"/>
+            <circle cx="264" cy="242" r="2" fill="#a78bfa" opacity=".4"/>
+            <circle cx="256" cy="250" r="2" fill="#a78bfa" opacity=".4"/>
+            <circle cx="264" cy="250" r="2" fill="#a78bfa" opacity=".4"/>
+
+            <!-- ── LIVE CARDS ── -->
+            <!-- Card 1 active -->
+            <rect x="308" y="80" width="264" height="62" rx="8" fill="#0d1f14" stroke="#1a4a28" stroke-width="1"/>
+            <rect x="316" y="90" width="44" height="14" rx="7" fill="#47d4a0" opacity=".18"/>
+            <rect x="320" y="93" width="32" height="6" rx="3" fill="#47d4a0" opacity=".65"/>
+            <!-- live pulse dot -->
+            <circle cx="540" cy="93" r="4" fill="#47d4a0" opacity=".9"/>
+            <circle cx="540" cy="93" r="8" fill="#47d4a0" opacity=".15"/>
+            <rect x="316" y="110" width="152" height="7" rx="3" fill="#86efac" opacity=".6"/>
+            <rect x="316" y="122" width="100" height="6" rx="3" fill="#3a6a50" opacity=".5"/>
+            <!-- progress bar -->
+            <rect x="316" y="133" width="248" height="4" rx="2" fill="#1a4a28"/>
+            <rect x="316" y="133" width="168" height="4" rx="2" fill="#47d4a0" opacity=".8"/>
+            <!-- Card 2 -->
+            <rect x="308" y="150" width="264" height="62" rx="8" fill="#0d1f14" stroke="#1a4a28" stroke-width="1"/>
+            <rect x="316" y="160" width="56" height="14" rx="7" fill="#47d4a0" opacity=".18"/>
+            <rect x="320" y="163" width="44" height="6" rx="3" fill="#47d4a0" opacity=".65"/>
+            <circle cx="540" cy="163" r="4" fill="#fbbf24" opacity=".9"/>
+            <circle cx="540" cy="163" r="8" fill="#fbbf24" opacity=".15"/>
+            <rect x="316" y="180" width="136" height="7" rx="3" fill="#86efac" opacity=".6"/>
+            <rect x="316" y="192" width="88" height="6" rx="3" fill="#3a6a50" opacity=".5"/>
+            <rect x="316" y="203" width="248" height="4" rx="2" fill="#1a4a28"/>
+            <rect x="316" y="203" width="90" height="4" rx="2" fill="#fbbf24" opacity=".7"/>
+            <!-- Card 3 drop zone (where dragged card will land) -->
+            <rect x="308" y="222" width="264" height="50" rx="8" fill="none" stroke="#47d4a0" stroke-width="1.5" stroke-dasharray="5 3" opacity=".4"/>
+            <rect x="390" y="240" width="100" height="14" rx="7" fill="#47d4a0" opacity=".06"/>
+            <rect x="412" y="244" width="56" height="6" rx="3" fill="#47d4a0" opacity=".2"/>
+
+            <!-- ── POST-EVENT CARDS ── -->
+            <!-- Card 1 done -->
+            <rect x="600" y="80" width="264" height="62" rx="8" fill="#1a110a" stroke="#3a2010" stroke-width="1"/>
+            <rect x="608" y="90" width="40" height="14" rx="7" fill="#fb923c" opacity=".18"/>
+            <rect x="612" y="93" width="28" height="6" rx="3" fill="#fb923c" opacity=".6"/>
+            <!-- checkmark -->
+            <circle cx="840" cy="97" r="9" fill="#fb923c" opacity=".12"/>
+            <path d="M835 97 L839 101 L845 93" stroke="#fb923c" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="608" y="110" width="144" height="7" rx="3" fill="#fdba74" opacity=".6"/>
+            <rect x="608" y="122" width="96" height="6" rx="3" fill="#5a3a20" opacity=".5"/>
+            <rect x="608" y="133" width="248" height="4" rx="2" fill="#3a2010"/>
+            <rect x="608" y="133" width="248" height="4" rx="2" fill="#fb923c" opacity=".6"/>
+            <!-- Card 2 -->
+            <rect x="600" y="150" width="264" height="62" rx="8" fill="#1a110a" stroke="#3a2010" stroke-width="1"/>
+            <rect x="608" y="160" width="52" height="14" rx="7" fill="#fb923c" opacity=".18"/>
+            <rect x="612" y="163" width="40" height="6" rx="3" fill="#fb923c" opacity=".6"/>
+            <circle cx="840" cy="167" r="9" fill="#fb923c" opacity=".12"/>
+            <path d="M835 167 L839 171 L845 163" stroke="#fb923c" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="608" y="180" width="164" height="7" rx="3" fill="#fdba74" opacity=".6"/>
+            <rect x="608" y="192" width="108" height="6" rx="3" fill="#5a3a20" opacity=".5"/>
+            <rect x="608" y="203" width="248" height="4" rx="2" fill="#3a2010"/>
+            <rect x="608" y="203" width="248" height="4" rx="2" fill="#fb923c" opacity=".6"/>
+            <!-- Card 3 -->
+            <rect x="600" y="222" width="264" height="50" rx="8" fill="#1a110a" stroke="#3a2010" stroke-width="1"/>
+            <rect x="608" y="230" width="48" height="14" rx="7" fill="#fb923c" opacity=".18"/>
+            <rect x="612" y="233" width="36" height="6" rx="3" fill="#fb923c" opacity=".6"/>
+            <circle cx="840" cy="248" r="9" fill="#fb923c" opacity=".12"/>
+            <path d="M835 248 L839 252 L845 244" stroke="#fb923c" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="608" y="249" width="128" height="7" rx="3" fill="#fdba74" opacity=".55"/>
+
+            <!-- column dividers -->
+            <line x1="292" y1="46" x2="292" y2="272" stroke="#1a1a2e" stroke-width="1.5" opacity=".6"/>
+            <line x1="584" y1="46" x2="584" y2="272" stroke="#1a1a2e" stroke-width="1.5" opacity=".6"/>
+          </svg>
+        </div>
+        <div class="proj-info">
+          <div class="proj-meta">
+            <span class="proj-num">07</span>
+            <span class="proj-tag">Event Ops · Figma · UX</span>
+          </div>
+          <div class="proj-name">Event Operations — Kanban Management UI</div>
+          <div class="proj-desc">Designed a drag-and-drop Kanban interface in Figma for managing scheduled operational events — facility bookings, traffic management, and planned works — across three phases: Pre-Event, Live, and Post-Event.</div>
+          <div class="proj-year">2025</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -2450,6 +2602,15 @@ const PROJECTS = {
     process: 'Ran 3 brand workshops with founders to extract core values and personality. Explored 4 distinct visual directions before landing on a warm, human-forward identity that stood apart from the cold, utilitarian fintech aesthetic of competitors.',
     metrics: [{ val: '4wk', label: 'Brief to delivery' }, { val: '6', label: 'Brand touchpoints' }, { val: '100%', label: 'Founder satisfaction' }],
     svgId: 'modal-svg-05'
+  },
+  '08': {
+    tag: 'Event Ops · Figma · UX',
+    title: 'Event Operations — Kanban Management UI',
+    year: '2025',
+    overview: 'Designed a drag-and-drop Kanban interface in Figma for scheduling and managing operational events — covering facility usage, traffic management, road works, and any scheduled city operations. The tool gives ops teams a shared visual board to coordinate across departments and track every event from planning through to debrief.',
+    role: 'Lead UX Designer. Responsible for the full design from concept to high-fidelity prototype — including user research with operations planners, information architecture, interaction design for drag-and-drop behaviours, and the Figma component system underpinning the UI.',
+    process: 'Mapped the existing event planning process through stakeholder interviews and workflow shadowing. Identified three critical phases — Pre-Event (briefing, approvals, resource allocation), Live (real-time status, incident tracking, team comms), and Post-Event (debrief, reporting, sign-off) — and designed a Kanban board where event cards flow between phases. Used Figma\'s auto-layout and interactive components to prototype realistic drag-and-drop interactions for sign-off by stakeholders before handoff.',
+    metrics: [{ val: '3', label: 'Event phases' }, { val: '1', label: 'Unified board' }, { val: 'Figma', label: 'Prototyped in' }]
   },
   '07': {
     tag: 'Command & Control · Video Wall · UX',
