@@ -1230,7 +1230,7 @@ footer{
       </div>
 
       <!-- 06 3D Character Workshop -->
-      <div class="proj-card reveal" data-id="06">
+      <div class="proj-card reveal" data-id="06" style="display:none">
         <div class="proj-arrow">↗</div>
         <div class="proj-mockup">
           <svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg">
@@ -1281,81 +1281,234 @@ footer{
       <div class="proj-card wide reveal" data-id="07">
         <div class="proj-arrow">↗</div>
         <div class="proj-mockup">
-          <svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg">
-            <rect width="440" height="260" fill="#060d18"/>
-            <!-- room ambient glow -->
-            <rect x="0" y="0" width="440" height="260" fill="url(#roomGlow)"/>
+          <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="880" height="300" fill="#060d18"/>
             <defs>
-              <radialGradient id="roomGlow" cx="50%" cy="45%" r="55%">
-                <stop offset="0%" stop-color="#003a6e" stop-opacity=".4"/>
+              <radialGradient id="ccrGlow" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#003a6e" stop-opacity=".35"/>
                 <stop offset="100%" stop-color="#060d18" stop-opacity="0"/>
               </radialGradient>
             </defs>
-            <!-- video wall — 3×2 grid -->
-            <rect x="30" y="18" width="380" height="160" rx="6" fill="#0a1628" stroke="#1a3a6a" stroke-width="1.5"/>
-            <!-- panel grid lines -->
-            <line x1="163" y1="18" x2="163" y2="178" stroke="#0d1f3a" stroke-width="2"/>
-            <line x1="277" y1="18" x2="277" y2="178" stroke="#0d1f3a" stroke-width="2"/>
-            <line x1="30" y1="98" x2="410" y2="98" stroke="#0d1f3a" stroke-width="2"/>
-            <!-- panel 1: map -->
-            <rect x="33" y="21" width="127" height="74" rx="3" fill="#081220"/>
-            <rect x="33" y="21" width="127" height="74" rx="3" fill="#071530" opacity=".6"/>
-            <line x1="33" y1="42" x2="160" y2="42" stroke="#0e2a50" stroke-width="1" opacity=".6"/>
-            <line x1="33" y1="58" x2="160" y2="58" stroke="#0e2a50" stroke-width="1" opacity=".6"/>
-            <line x1="33" y1="74" x2="160" y2="74" stroke="#0e2a50" stroke-width="1" opacity=".6"/>
-            <line x1="70" y1="21" x2="70" y2="95" stroke="#0e2a50" stroke-width="1" opacity=".6"/>
-            <line x1="110" y1="21" x2="110" y2="95" stroke="#0e2a50" stroke-width="1" opacity=".6"/>
-            <circle cx="96" cy="58" r="14" fill="#00d4ff" opacity=".12"/>
-            <circle cx="96" cy="58" r="6" fill="#00d4ff" opacity=".5"/>
-            <circle cx="96" cy="58" r="2.5" fill="#fff"/>
-            <!-- panel 2: big metric -->
-            <rect x="166" y="21" width="108" height="74" rx="3" fill="#040e1c"/>
-            <text x="220" y="65" text-anchor="middle" fill="#00d4ff" font-size="28" font-weight="800" font-family="Inter,sans-serif" opacity=".9">98.2%</text>
-            <rect x="186" y="74" width="68" height="8" rx="3" fill="#1a4070" opacity=".5"/>
-            <!-- panel 3: line chart -->
-            <rect x="280" y="21" width="127" height="74" rx="3" fill="#040e1c"/>
-            <polyline points="286,88 306,72 326,80 346,55 366,63 386,42 406,50" fill="none" stroke="#00d4ff" stroke-width="2" opacity=".8"/>
-            <polyline points="286,88 306,72 326,80 346,55 366,63 386,42 406,50 406,95 286,95" fill="#00d4ff" opacity=".06"/>
-            <!-- panel 4: status list -->
-            <rect x="33" y="101" width="127" height="74" rx="3" fill="#040e1c"/>
-            <rect x="42" y="110" width="8" height="8" rx="4" fill="#47d4a0"/>
-            <rect x="56" y="112" width="60" height="6" rx="3" fill="#3a6a50" opacity=".7"/>
-            <rect x="42" y="126" width="8" height="8" rx="4" fill="#47d4a0"/>
-            <rect x="56" y="128" width="75" height="6" rx="3" fill="#3a6a50" opacity=".7"/>
-            <rect x="42" y="142" width="8" height="8" rx="4" fill="#fbbf24"/>
-            <rect x="56" y="144" width="50" height="6" rx="3" fill="#6a5a30" opacity=".7"/>
-            <rect x="42" y="158" width="8" height="8" rx="4" fill="#f87171"/>
-            <rect x="56" y="160" width="65" height="6" rx="3" fill="#6a3030" opacity=".7"/>
-            <!-- panel 5: donut -->
-            <rect x="166" y="101" width="108" height="74" rx="3" fill="#040e1c"/>
-            <circle cx="220" cy="138" r="26" fill="none" stroke="#0e2a50" stroke-width="10"/>
-            <circle cx="220" cy="138" r="26" fill="none" stroke="#3a7bd5" stroke-width="10" stroke-dasharray="82 82" stroke-dashoffset="0" opacity=".9"/>
-            <circle cx="220" cy="138" r="26" fill="none" stroke="#00d4ff" stroke-width="10" stroke-dasharray="40 124" stroke-dashoffset="-82" opacity=".75"/>
-            <!-- panel 6: bar -->
-            <rect x="280" y="101" width="127" height="74" rx="3" fill="#040e1c"/>
-            <rect x="292" y="152" width="14" height="20" rx="3" fill="#3a7bd5" opacity=".8"/>
-            <rect x="312" y="140" width="14" height="32" rx="3" fill="#3a7bd5" opacity=".8"/>
-            <rect x="332" y="145" width="14" height="27" rx="3" fill="#3a7bd5" opacity=".8"/>
-            <rect x="352" y="128" width="14" height="44" rx="3" fill="#00d4ff" opacity=".9"/>
-            <rect x="372" y="136" width="14" height="36" rx="3" fill="#3a7bd5" opacity=".8"/>
-            <!-- operator desk -->
-            <rect x="80" y="196" width="280" height="48" rx="8" fill="#0a1628" stroke="#1a3a6a" stroke-width="1"/>
-            <rect x="100" y="206" width="80" height="30" rx="4" fill="#071018"/>
-            <rect x="196" y="206" width="48" height="30" rx="4" fill="#071018"/>
-            <rect x="260" y="206" width="80" height="30" rx="4" fill="#071018"/>
-            <rect x="106" y="212" width="50" height="6" rx="3" fill="#1a3a6a" opacity=".7"/>
-            <rect x="106" y="224" width="62" height="5" rx="3" fill="#1a3a6a" opacity=".5"/>
-            <!-- bezel frame glow -->
-            <rect x="30" y="18" width="380" height="160" rx="6" fill="none" stroke="#00d4ff" stroke-width="1" opacity=".15"/>
+            <rect width="880" height="300" fill="url(#ccrGlow)"/>
+
+            <!-- ── 5 SCREENS ── -->
+            <!-- Screen bezels -->
+            <!-- S1 far-left -->
+            <rect x="16" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
+            <!-- S2 left -->
+            <rect x="172" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
+            <!-- S3 CENTER (taller) -->
+            <rect x="328" y="8" width="224" height="212" rx="5" fill="#07101c" stroke="#00d4ff" stroke-width="1.5" opacity=".7"/>
+            <!-- S4 right -->
+            <rect x="560" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
+            <!-- S5 far-right -->
+            <rect x="716" y="16" width="148" height="196" rx="5" fill="#09131f" stroke="#1a3a6a" stroke-width="1.5"/>
+
+            <!-- ── S1: Media / Broadcast Feed ── -->
+            <rect x="19" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
+            <rect x="23" y="22" width="50" height="6" rx="2" fill="#3a7bd5" opacity=".7"/>
+            <rect x="148" y="22" width="8" height="6" rx="2" fill="#f87171" opacity=".8"/>
+            <!-- video frames -->
+            <rect x="19" y="34" width="142" height="80" rx="2" fill="#0a1828"/>
+            <rect x="25" y="38" width="60" height="38" rx="2" fill="#0d2040"/>
+            <rect x="27" y="40" width="56" height="34" rx="1" fill="#071530"/>
+            <rect x="37" y="54" width="36" height="6" rx="2" fill="#3a7bd5" opacity=".5"/>
+            <rect x="91" y="38" width="64" height="38" rx="2" fill="#0d2040"/>
+            <rect x="93" y="40" width="60" height="34" rx="1" fill="#071a35"/>
+            <rect x="100" y="54" width="40" height="6" rx="2" fill="#3a7bd5" opacity=".5"/>
+            <!-- ticker -->
+            <rect x="19" y="116" width="142" height="14" rx="2" fill="#071020"/>
+            <rect x="23" y="120" width="100" height="6" rx="2" fill="#1a4070" opacity=".8"/>
+            <!-- schedule list -->
+            <rect x="19" y="133" width="142" height="76" rx="2" fill="#07101c"/>
+            <rect x="23" y="139" width="6" height="6" rx="3" fill="#47d4a0"/>
+            <rect x="33" y="140" width="80" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="118" y="140" width="36" height="5" rx="2" fill="#1a4070" opacity=".6"/>
+            <rect x="23" y="151" width="6" height="6" rx="3" fill="#47d4a0"/>
+            <rect x="33" y="152" width="65" height="5" rx="2" fill="#2a5a40" opacity=".7"/>
+            <rect x="118" y="152" width="36" height="5" rx="2" fill="#1a4070" opacity=".6"/>
+            <rect x="23" y="163" width="6" height="6" rx="3" fill="#fbbf24"/>
+            <rect x="33" y="164" width="72" height="5" rx="2" fill="#5a4a20" opacity=".8"/>
+            <rect x="118" y="164" width="36" height="5" rx="2" fill="#1a4070" opacity=".6"/>
+            <rect x="23" y="175" width="6" height="6" rx="3" fill="#f87171"/>
+            <rect x="33" y="176" width="58" height="5" rx="2" fill="#5a2020" opacity=".8"/>
+            <rect x="23" y="187" width="6" height="6" rx="3" fill="#3a7bd5"/>
+            <rect x="33" y="188" width="74" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <!-- label -->
+            <text x="90" y="224" text-anchor="middle" fill="#3a7bd5" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">MEDIA &amp; SCHEDULES</text>
+
+            <!-- ── S2: Incident / Alert Feed ── -->
+            <rect x="175" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
+            <rect x="179" y="22" width="55" height="6" rx="2" fill="#f87171" opacity=".7"/>
+            <rect x="248" y="22" width="30" height="6" rx="7" fill="#f87171" opacity=".25"/>
+            <rect x="252" y="24" width="22" height="2" rx="1" fill="#f87171" opacity=".6"/>
+            <!-- alert cards -->
+            <rect x="175" y="34" width="142" height="36" rx="3" fill="#1a0a0a" stroke="#f87171" stroke-width="1" opacity=".7"/>
+            <rect x="179" y="38" width="8" height="8" rx="4" fill="#f87171"/>
+            <rect x="192" y="39" width="80" height="6" rx="2" fill="#8a3030" opacity=".9"/>
+            <rect x="192" y="49" width="55" height="4" rx="2" fill="#5a2020" opacity=".7"/>
+            <rect x="280" y="39" width="30" height="6" rx="3" fill="#f87171" opacity=".25"/>
+            <rect x="283" y="41" width="24" height="2" rx="1" fill="#f87171" opacity=".8"/>
+            <rect x="175" y="74" width="142" height="30" rx="3" fill="#0d1a10" stroke="#fbbf24" stroke-width="1" opacity=".6"/>
+            <rect x="179" y="78" width="8" height="8" rx="4" fill="#fbbf24"/>
+            <rect x="192" y="79" width="72" height="6" rx="2" fill="#6a5a20" opacity=".9"/>
+            <rect x="192" y="89" width="48" height="4" rx="2" fill="#4a4020" opacity=".7"/>
+            <rect x="175" y="108" width="142" height="30" rx="3" fill="#071530" stroke="#3a7bd5" stroke-width="1" opacity=".5"/>
+            <rect x="179" y="112" width="8" height="8" rx="4" fill="#3a7bd5"/>
+            <rect x="192" y="113" width="68" height="6" rx="2" fill="#1a3a6a" opacity=".9"/>
+            <rect x="192" y="123" width="44" height="4" rx="2" fill="#0e2850" opacity=".7"/>
+            <!-- status summary -->
+            <rect x="175" y="142" width="142" height="66" rx="3" fill="#07101c"/>
+            <rect x="179" y="147" width="40" height="5" rx="2" fill="#888" opacity=".5"/>
+            <rect x="179" y="158" width="24" height="16" rx="3" fill="#f87171" opacity=".2"/>
+            <text x="191" y="170" text-anchor="middle" fill="#f87171" font-size="9" font-weight="800" font-family="Inter,sans-serif">3</text>
+            <rect x="209" y="158" width="24" height="16" rx="3" fill="#fbbf24" opacity=".2"/>
+            <text x="221" y="170" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="800" font-family="Inter,sans-serif">7</text>
+            <rect x="239" y="158" width="24" height="16" rx="3" fill="#47d4a0" opacity=".2"/>
+            <text x="251" y="170" text-anchor="middle" fill="#47d4a0" font-size="9" font-weight="800" font-family="Inter,sans-serif">24</text>
+            <rect x="179" y="179" width="60" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="248" y="179" width="62" height="5" rx="2" fill="#1a4070" opacity=".4"/>
+            <!-- label -->
+            <text x="246" y="224" text-anchor="middle" fill="#f87171" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">INCIDENTS &amp; ALERTS</text>
+
+            <!-- ── S3 CENTER: City Operations Map ── -->
+            <!-- map bg -->
+            <rect x="331" y="11" width="218" height="206" rx="3" fill="#061020"/>
+            <!-- grid lines -->
+            <line x1="331" y1="50" x2="549" y2="50" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="331" y1="85" x2="549" y2="85" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="331" y1="120" x2="549" y2="120" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="331" y1="155" x2="549" y2="155" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="331" y1="190" x2="549" y2="190" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="370" y1="11" x2="370" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="410" y1="11" x2="410" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="450" y1="11" x2="450" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="490" y1="11" x2="490" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <line x1="530" y1="11" x2="530" y2="217" stroke="#0d2040" stroke-width="1" opacity=".5"/>
+            <!-- road network -->
+            <path d="M340 130 Q380 100 440 108 Q500 116 545 95" fill="none" stroke="#0e2850" stroke-width="3" opacity=".8"/>
+            <path d="M340 155 Q390 148 440 150 Q490 152 545 140" fill="none" stroke="#0e2850" stroke-width="2" opacity=".6"/>
+            <path d="M395 11 Q400 60 398 108 Q396 160 394 217" fill="none" stroke="#0e2850" stroke-width="2" opacity=".6"/>
+            <path d="M460 11 Q458 80 462 130 Q466 180 462 217" fill="none" stroke="#0e2850" stroke-width="2" opacity=".6"/>
+            <!-- pulse zones -->
+            <circle cx="440" cy="108" r="28" fill="#00d4ff" opacity=".05"/>
+            <circle cx="440" cy="108" r="18" fill="#00d4ff" opacity=".08"/>
+            <circle cx="440" cy="108" r="10" fill="#00d4ff" opacity=".2"/>
+            <circle cx="440" cy="108" r="4" fill="#00d4ff" opacity=".9"/>
+            <!-- incident markers -->
+            <circle cx="390" cy="130" r="6" fill="#f87171" opacity=".8"/>
+            <circle cx="390" cy="130" r="12" fill="#f87171" opacity=".12"/>
+            <circle cx="500" cy="95" r="5" fill="#fbbf24" opacity=".8"/>
+            <circle cx="500" cy="95" r="10" fill="#fbbf24" opacity=".12"/>
+            <circle cx="355" cy="80" r="4" fill="#47d4a0" opacity=".8"/>
+            <circle cx="475" cy="160" r="4" fill="#47d4a0" opacity=".8"/>
+            <circle cx="535" cy="150" r="5" fill="#fbbf24" opacity=".7"/>
+            <!-- top HUD bar -->
+            <rect x="331" y="11" width="218" height="18" rx="3" fill="#07101c" opacity=".95"/>
+            <rect x="335" y="15" width="40" height="6" rx="2" fill="#00d4ff" opacity=".5"/>
+            <circle cx="520" cy="18" r="4" fill="#47d4a0" opacity=".8"/>
+            <rect x="526" y="15" width="18" height="6" rx="2" fill="#2a5a40" opacity=".7"/>
+            <!-- label -->
+            <text x="440" y="230" text-anchor="middle" fill="#00d4ff" font-size="9" font-family="Inter,sans-serif" opacity=".7" font-weight="700">CITY OPERATIONS MAP</text>
+
+            <!-- ── S4: KPI Dashboards ── -->
+            <rect x="563" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
+            <rect x="567" y="22" width="55" height="6" rx="2" fill="#3a7bd5" opacity=".7"/>
+            <!-- KPI tiles -->
+            <rect x="563" y="34" width="68" height="44" rx="4" fill="#071530"/>
+            <text x="597" y="56" text-anchor="middle" fill="#00d4ff" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">98%</text>
+            <rect x="571" y="62" width="52" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="637" y="34" width="68" height="44" rx="4" fill="#071530"/>
+            <text x="671" y="56" text-anchor="middle" fill="#47d4a0" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">4.2K</text>
+            <rect x="645" y="62" width="46" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="563" y="82" width="68" height="44" rx="4" fill="#071530"/>
+            <text x="597" y="104" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">12m</text>
+            <rect x="571" y="110" width="52" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="637" y="82" width="68" height="44" rx="4" fill="#071530"/>
+            <text x="671" y="104" text-anchor="middle" fill="#a78bfa" font-size="16" font-weight="800" font-family="Inter,sans-serif" opacity=".9">99.9</text>
+            <rect x="645" y="110" width="46" height="5" rx="2" fill="#1a4070" opacity=".5"/>
+            <!-- trend chart -->
+            <rect x="563" y="130" width="142" height="78" rx="4" fill="#071530"/>
+            <rect x="567" y="134" width="50" height="5" rx="2" fill="#1a4070" opacity=".6"/>
+            <polyline points="570,195 592,178 614,185 636,162 658,170 680,148 702,155" fill="none" stroke="#00d4ff" stroke-width="2" opacity=".8"/>
+            <polyline points="570,195 592,178 614,185 636,162 658,170 680,148 702,155 702,200 570,200" fill="#00d4ff" opacity=".05"/>
+            <polyline points="570,200 592,190 614,193 636,183 658,186 680,176 702,180" fill="none" stroke="#47d4a0" stroke-width="1.5" opacity=".6" stroke-dasharray="3 2"/>
+            <!-- label -->
+            <text x="634" y="224" text-anchor="middle" fill="#3a7bd5" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">KPI DASHBOARDS</text>
+
+            <!-- ── S5: Resource Tracking ── -->
+            <rect x="719" y="19" width="142" height="12" rx="3" fill="#0d1e30"/>
+            <rect x="723" y="22" width="60" height="6" rx="2" fill="#a78bfa" opacity=".7"/>
+            <!-- resource unit list -->
+            <rect x="719" y="34" width="142" height="170" rx="3" fill="#07101c"/>
+            <!-- unit rows -->
+            <rect x="723" y="40" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="51" r="5" fill="#47d4a0"/>
+            <rect x="742" y="46" width="60" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="742" y="54" width="40" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="820" y="46" width="26" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
+            <rect x="824" y="49" width="18" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
+
+            <rect x="723" y="66" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="77" r="5" fill="#47d4a0"/>
+            <rect x="742" y="72" width="55" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="742" y="80" width="42" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="820" y="72" width="26" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
+            <rect x="824" y="75" width="18" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
+
+            <rect x="723" y="92" width="130" height="22" rx="3" fill="#1a0a0a"/>
+            <circle cx="733" cy="103" r="5" fill="#f87171"/>
+            <rect x="742" y="98" width="68" height="5" rx="2" fill="#5a2020" opacity=".8"/>
+            <rect x="742" y="106" width="38" height="4" rx="2" fill="#3a1010" opacity=".7"/>
+            <rect x="820" y="98" width="26" height="10" rx="5" fill="#f87171" opacity=".2"/>
+            <rect x="824" y="101" width="18" height="4" rx="2" fill="#f87171" opacity=".7"/>
+
+            <rect x="723" y="118" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="129" r="5" fill="#fbbf24"/>
+            <rect x="742" y="124" width="50" height="5" rx="2" fill="#5a4a20" opacity=".8"/>
+            <rect x="742" y="132" width="44" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="820" y="124" width="26" height="10" rx="5" fill="#fbbf24" opacity=".2"/>
+            <rect x="824" y="127" width="18" height="4" rx="2" fill="#fbbf24" opacity=".7"/>
+
+            <rect x="723" y="144" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="155" r="5" fill="#47d4a0"/>
+            <rect x="742" y="150" width="62" height="5" rx="2" fill="#2a5a40" opacity=".8"/>
+            <rect x="742" y="158" width="36" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="820" y="150" width="26" height="10" rx="5" fill="#47d4a0" opacity=".2"/>
+            <rect x="824" y="153" width="18" height="4" rx="2" fill="#47d4a0" opacity=".7"/>
+
+            <rect x="723" y="170" width="130" height="22" rx="3" fill="#0e1e38"/>
+            <circle cx="733" cy="181" r="5" fill="#3a7bd5"/>
+            <rect x="742" y="176" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".8"/>
+            <rect x="742" y="184" width="42" height="4" rx="2" fill="#1a4070" opacity=".5"/>
+            <rect x="820" y="176" width="26" height="10" rx="5" fill="#3a7bd5" opacity=".2"/>
+            <rect x="824" y="179" width="18" height="4" rx="2" fill="#3a7bd5" opacity=".7"/>
+            <!-- label -->
+            <text x="790" y="224" text-anchor="middle" fill="#a78bfa" font-size="8" font-family="Inter,sans-serif" opacity=".6" font-weight="600">RESOURCE TRACKING</text>
+
+            <!-- ── OPERATOR DESK ── -->
+            <rect x="180" y="242" width="520" height="44" rx="8" fill="#0a1628" stroke="#1a3a6a" stroke-width="1"/>
+            <rect x="196" y="252" width="90" height="26" rx="4" fill="#071018"/>
+            <rect x="302" y="252" width="90" height="26" rx="4" fill="#071018"/>
+            <rect x="408" y="252" width="90" height="26" rx="4" fill="#071018"/>
+            <rect x="514" y="252" width="90" height="26" rx="4" fill="#071018"/>
+            <rect x="202" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <rect x="202" y="267" width="70" height="4" rx="2" fill="#1a3a6a" opacity=".4"/>
+            <rect x="308" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <rect x="414" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+            <rect x="520" y="258" width="58" height="5" rx="2" fill="#1a3a6a" opacity=".7"/>
+
+            <!-- ambient screen glow -->
+            <rect x="328" y="8" width="224" height="212" rx="5" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity=".2"/>
           </svg>
         </div>
         <div class="proj-info">
           <div class="proj-meta">
-            <span class="proj-num">07</span>
-            <span class="proj-tag">Video Wall · C2 · UX</span>
+            <span class="proj-num">06</span>
+            <span class="proj-tag">Command &amp; Control · Video Wall · UX</span>
           </div>
-          <div class="proj-name">Command & Control Centre — Video Wall</div>
-          <div class="proj-desc">Designed a multi-panel video wall interface for a national command centre. Real-time data feeds, alert hierarchy, and operator-focused layout optimised for split-second decision-making.</div>
+          <div class="proj-name">Command &amp; Control Centre — Video Wall</div>
+          <div class="proj-desc">Led the UX design of a 5-screen video wall for a national command &amp; control operations room. Collaborated with stakeholders to define information hierarchy across three zones: media feeds &amp; schedules on the left, a live city operations map at centre, and real-time KPI dashboards &amp; resource tracking on the right — enabling operators to monitor, triage, and respond at a glance.</div>
           <div class="proj-year">2024</div>
         </div>
       </div>
